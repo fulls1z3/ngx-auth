@@ -1,0 +1,6 @@
+coverage:
+  status:
+    project:
+      ngx-auth/core:
+        target: 80%
+        paths: packages/@ngx-auth/core

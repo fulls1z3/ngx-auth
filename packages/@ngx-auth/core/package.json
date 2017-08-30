@@ -1,0 +1,40 @@
+{
+  "name": "@ngx-auth/core",
+  "version": "0.2.0-alpha.1",
+  "description": "JWT authentication utility for Angular",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fulls1z3/ngx-auth.git"
+  },
+  "keywords": [
+    "security",
+    "authentication",
+    "jwt",
+    "auth",
+    "angular"
+  ],
+  "author": {
+    "name": "Burak Tasci",
+    "email": "me@fulls1z3.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fulls1z3/ngx-auth/issues"
+  },
+  "homepage": "https://github.com/fulls1z3/ngx-auth/tree/master/packages/@ngx-auth/core#readme",
+  "main": "./bundles/auth.umd.min.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "dependencies": {
+    "tslib": "^1.7.1"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "~2.4.0"
+  },
+  "peerDependencies": {
+    "@angular/core": "^2.0.0 || ^4.0.0",
+    "@angular/http": "^2.0.0 || ^4.0.0",
+    "@angular/router": "^2.0.0 || ^4.0.0",
+    "rxjs": "^5.0.1"
+  }
+}
