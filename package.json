@@ -1,0 +1,61 @@
+{
+  "name": "ngx-auth",
+  "version": "0.0.0",
+  "description": "JWT authentication utility for Angular",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fulls1z3/ngx-auth.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Burak Tasci",
+    "email": "me@fulls1z3.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fulls1z3/ngx-auth/issues"
+  },
+  "homepage": "https://github.com/fulls1z3/ngx-auth#readme",
+  "scripts": {
+    "clean": "gulp clean --color",
+    "lint": "gulp tslint --color",
+    "make": "gulp make --color",
+    "test": "gulp test --color"
+  },
+  "devDependencies": {
+    "@angular/common": "~2.4.0",
+    "@angular/compiler": "~2.4.0",
+    "@angular/core": "~2.4.0",
+    "@angular/http": "~2.4.0",
+    "@angular/platform-browser": "~2.4.0",
+    "@angular/platform-browser-dynamic": "~2.4.0",
+    "@angular/router": "~3.4.0",
+    "core-js": "^2.4.1",
+    "rxjs": "^5.0.1",
+    "zone.js": "^0.7.2",
+    "@types/jasmine": "^2.5.54",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-load-plugins": "^1.5.0",
+    "rimraf": "^2.6.1",
+    "gulp-exec": "^2.1.3",
+    "gulp-tslint": "^8.1.2",
+    "webpack": "^3.5.5",
+    "tslint-loader": "^3.5.3",
+    "awesome-typescript-loader": "^3.2.3",
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-coverage": "^1.1.1",
+    "karma-mocha-reporter": "^2.2.4",
+    "karma-coverage-istanbul-reporter": "^1.3.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.4",
+    "karma-chrome-launcher": "^2.2.0",
+    "source-map-loader": "^0.2.1",
+    "istanbul-instrumenter-loader": "^3.0.0",
+    "codelyzer": "^3.1.2",
+    "tslint": "~5.7.0",
+    "angular-tslint-rules": "^1.0.4",
+    "typescript": "~2.1.6"
+  }
+}
