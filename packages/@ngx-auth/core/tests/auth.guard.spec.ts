@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 
 // module
 import { AuthLoader, AuthService, AuthStaticLoader } from '../index';
-import { mockAuthData, TestBootstrapComponent, testModuleConfig } from './index.spec';
+import { mockAuthData, TestBootstrapComponent, testModuleConfig } from './common';
 
 describe('@ngx-auth/core:',
   () => {
