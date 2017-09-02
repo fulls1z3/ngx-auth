@@ -1,9 +1,9 @@
 // angular
-import { getTestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
 // module
 import { AuthLoader, AuthService, AuthStaticLoader, Backend } from '../index';
-import { testModuleConfig, testSettings } from './index.spec';
+import { testModuleConfig, testSettings } from './common';
 
 describe('@ngx-auth/core:',
   () => {
@@ -43,8 +43,7 @@ describe('@ngx-auth/core:',
 
         it('should be able to provide `AuthStaticLoader`',
           () => {
-            const injector = getTestBed();
-            const auth = injector.get(AuthService);
+            const auth = TestBed.get(AuthService);
 
             expect(AuthStaticLoader).toBeDefined();
             expect(auth.loader).toBeDefined();
@@ -80,8 +79,7 @@ describe('@ngx-auth/core:',
               useClass: CustomLoader
             });
 
-            const injector = getTestBed();
-            const auth = injector.get(AuthService);
+            const auth = TestBed.get(AuthService);
 
             expect(CustomLoader).toBeDefined();
             expect(auth.loader).toBeDefined();

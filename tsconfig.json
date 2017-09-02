@@ -1,23 +1,23 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "es2015",
+    "module": "commonjs",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "removeComments": true,
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
     "importHelpers": true,
-    "lib": [ "es2015", "dom" ],
-    "declaration": true,
-    "typeRoots": [
-      "./node_modules/@types"
+    "lib": [
+      "es2017",
+      "dom"
     ]
   },
+  "include": [
+    "scripts/*.ts",
+    "packages/**/*.ts"
+  ],
   "exclude": [
     "node_modules"
-  ],
-  "compileOnSave": false,
-  "buildOnSave": false
+  ]
 }

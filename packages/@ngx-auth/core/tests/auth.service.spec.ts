@@ -3,7 +3,7 @@ import { inject, TestBed } from '@angular/core/testing';
 
 // module
 import { AuthLoader, AuthService, AuthStaticLoader } from '../index';
-import { TestBootstrapComponent, testModuleConfig, testSettings } from './index.spec';
+import { TestBootstrapComponent, testModuleConfig, testSettings } from './common';
 
 describe('@ngx-auth/core:',
   () => {
