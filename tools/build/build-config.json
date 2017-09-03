@@ -1,0 +1,18 @@
+{
+  "@ngx-auth": {
+    "core": {
+      "angularVersion": 2,
+      "bundle": {
+        "globals": {
+          "@angular/http": "ng.http",
+          "@angular/router": "ng.router",
+          "rxjs/Observable": "Rx.Observable"
+        },
+        "external": [
+          "rxjs/add/operator/map"
+        ]
+      },
+      "runTests": true
+    }
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "@ngx-auth": {
-    "core": {
-      "angularVersion": 2,
-      "runTests": true
-    }
-  }
-}
