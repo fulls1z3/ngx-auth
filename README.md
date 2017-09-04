@@ -1,8 +1,7 @@
 # ngx-auth
 JWT authentication utility for **Angular**
 
-[![Linux build](https://travis-ci.org/fulls1z3/ngx-auth.svg?branch=master)](https://travis-ci.org/fulls1z3/ngx-auth)
-[![Windows build](https://ci.appveyor.com/api/projects/status/github/fulls1z3/ngx-auth?branch=master&svg=true)](https://ci.appveyor.com/project/fulls1z3/ngx-auth)
+[![CircleCI](https://circleci.com/gh/fulls1z3/ngx-auth.svg?style=shield)](https://circleci.com/gh/fulls1z3/ngx-auth)
 [![coverage](https://codecov.io/github/fulls1z3/ngx-auth/coverage.svg?branch=master)](https://codecov.io/gh/fulls1z3/ngx-auth)
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 [![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/styleguide)
