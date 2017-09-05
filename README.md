@@ -12,6 +12,10 @@ JWT authentication utility for **Angular**
 **`@ngx-auth/core`** is a basic JWT-based authentication utility used for logging in and out of the **Angular** application
 and restrict unauthenticated access from accessing restricted routes.
 
+#### NOTICE
+> This *[4.x.x] branch* is intented to work with `@angular v4.x.x`. If you're developing on a later release of **Angular**
+than `v4.x.x`, then you should probably choose the appropriate version of this library by visiting the *[master] branch*.
+
 ## Packages:
 Name | Description | NPM
 --- | --- | ---
@@ -33,6 +37,8 @@ The MIT License (MIT)
 
 Copyright (c) 2017 [Burak Tasci]
 
+[master]: https://github.com/ngx-auth/core/tree/master
+[4.x.x]: https://github.com/ngx-auth/core/tree/4.x.x
 [ngx-auth]: https://github.com/fulls1z3/ngx-auth
 [ng-seed/universal]: https://github.com/ng-seed/universal
 [fulls1z3/example-app]: https://github.com/fulls1z3/example-app
