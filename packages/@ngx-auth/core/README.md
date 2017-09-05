@@ -1,8 +1,8 @@
 # @ngx-auth/core [![npm version](https://badge.fury.io/js/%40ngx-auth%2Fcore.svg)](https://www.npmjs.com/package/@ngx-auth/core) [![npm downloads](https://img.shields.io/npm/dm/%40ngx-auth%2Fcore.svg)](https://www.npmjs.com/package/@ngx-auth/core)
 JWT authentication utility for **Angular**
 
-[![CircleCI](https://circleci.com/gh/fulls1z3/ngx-auth.svg?style=shield)](https://circleci.com/gh/fulls1z3/ngx-auth)
-[![coverage](https://codecov.io/github/fulls1z3/ngx-auth/coverage.svg?branch=master)](https://codecov.io/gh/fulls1z3/ngx-auth)
+[![CircleCI](https://circleci.com/gh/fulls1z3/ngx-auth/tree/2.x.x.svg.svg?style=shield)](https://circleci.com/gh/fulls1z3/ngx-auth)
+[![coverage](https://codecov.io/github/fulls1z3/ngx-auth/coverage.svg?branch=2.x.x)](https://codecov.io/gh/fulls1z3/ngx-auth)
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/styleguide)
@@ -11,6 +11,10 @@ JWT authentication utility for **Angular**
 
 **`@ngx-auth/core`** is a basic JWT-based authentication utility used for logging in and out of the **Angular** application
 and restrict unauthenticated access from accessing restricted routes.
+
+#### NOTICE
+> This *[2.x.x] branch* is intented to work with `@angular v2.x.x`. If you're developing on a later release of **Angular**
+than `v2.x.x`, then you should probably choose the appropriate version of this library by visiting the *[master] branch*.
 
 ## Table of contents:
 - [Prerequisites](#prerequisites)
@@ -27,8 +31,8 @@ and restrict unauthenticated access from accessing restricted routes.
 - [License](#license)
 
 ## <a name="prerequisites"></a> Prerequisites
-This package depends on `Angular v2.0.0` but it's highly recommended that you are running at least **`@angular v2.4.0`**
-and **`@angular/router v3.4.0`**. Older versions contain outdated dependencies, might produce errors.
+This library depends on `Angular v2.0.0` but it's highly recommended that you are running at least **`@angular v2.4.0`**.
+Older versions contain outdated dependencies, might produce errors.
 
 Also, please ensure that you are using **`Typescript v2.1.6`** or higher.
 
@@ -210,6 +214,8 @@ The MIT License (MIT)
 
 Copyright (c) 2017 [Burak Tasci]
 
+[master]: https://github.com/ngx-auth/core/tree/master
+[2.x.x]: https://github.com/ngx-auth/core/tree/2.x.x
 [ng-seed/universal]: https://github.com/ng-seed/universal
 [fulls1z3/example-app]: https://github.com/fulls1z3/example-app
 [@ngx-config/core]: https://github.com/fulls1z3/ngx-config/tree/master/packages/@ngx-config/core
