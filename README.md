@@ -1,4 +1,6 @@
 # ngx-auth
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/fulls1z3/ngx-auth.svg)](https://greenkeeper.io/)
 JWT authentication utility for **Angular**
 
 [![CircleCI](https://circleci.com/gh/fulls1z3/ngx-auth.svg?style=shield)](https://circleci.com/gh/fulls1z3/ngx-auth)
