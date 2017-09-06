@@ -1,6 +1,6 @@
 {
   "name": "@ngx-auth/core",
-  "version": "0.2.0-alpha.1",
+  "version": "4.0.0",
   "description": "JWT authentication utility for Angular",
   "repository": {
     "type": "git",
@@ -30,9 +30,9 @@
     "tslib": "~1.7.1"
   },
   "peerDependencies": {
-    "@angular/core": ">=2.0.0 <5.0.0 || >=4.0.0 <5.0.0",
-    "@angular/http": ">=2.0.0 <5.0.0 || >=4.0.0 <5.0.0",
-    "@angular/router": ">=3.0.0 <5.0.0 || >=4.0.0 <5.0.0",
+    "@angular/core": ">=4.0.0 <5.0.0",
+    "@angular/http": ">=4.0.0 <5.0.0",
+    "@angular/router": ">=4.0.0 <5.0.0",
     "rxjs": ">=5.0.1"
   }
 }
