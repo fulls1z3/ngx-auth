@@ -1,5 +1,5 @@
 // angular
-import { Inject, ModuleWithProviders, NgModule, OpaqueToken, Optional } from '@angular/core';
+import { Inject, InjectionToken, ModuleWithProviders, NgModule, Optional } from '@angular/core';
 
 // module
 import { AuthSettings } from './src/models/auth-settings';
@@ -13,7 +13,7 @@ export * from './src/auth.guard';
 export * from './src/auth.loader';
 export * from './src/auth.service';
 
-export const AUTH_FORROOT_GUARD = new OpaqueToken('AUTH_FORROOT_GUARD');
+export const AUTH_FORROOT_GUARD = new InjectionToken('AUTH_FORROOT_GUARD');
 
 // for AoT compilation
 export function authFactory(): AuthLoader {
