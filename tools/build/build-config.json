@@ -1,7 +1,7 @@
 {
   "@ngx-auth": {
     "core": {
-      "angularVersion": 2,
+      "angularVersion": 4,
       "bundle": {
         "globals": {
           "@angular/http": "ng.http",

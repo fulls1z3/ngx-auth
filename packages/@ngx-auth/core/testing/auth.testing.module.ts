@@ -1,5 +1,5 @@
 // angular
-import { ModuleWithProviders, NgModule, OpaqueToken } from '@angular/core';
+import { InjectionToken, ModuleWithProviders, NgModule } from '@angular/core';
 import { BaseRequestOptions, Http } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
 
@@ -9,7 +9,7 @@ import { fakeBackendFactory } from './mocks/auth-backend.mock';
 
 export * from './mocks/auth-backend.mock';
 
-export const MOCK_AUTH_PATH = new OpaqueToken('MOCK_AUTH_PATH');
+export const MOCK_AUTH_PATH = new InjectionToken<string>('MOCK_AUTH_PATH');
 
 @NgModule({
   exports: [AuthModule],
