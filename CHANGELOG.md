@@ -2,5 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.0.1"></a>
+## [4.0.1](https://github.com/fulls1z3/ngx-auth/compare/v4.0.0...v4.0.1) (2017-09-07)
+
+
+### Bug Fixes
+
+* fix moduleId for AoT compilation ([#19](https://github.com/fulls1z3/ngx-auth/issues/19)) ([59a6644](https://github.com/fulls1z3/ngx-auth/commit/59a6644)), closes [#17](https://github.com/fulls1z3/ngx-auth/issues/17)
+
+
+
 <a name="4.0.0"></a>
 # 4.0.0 (2017-09-06)
