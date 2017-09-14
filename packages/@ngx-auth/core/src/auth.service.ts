@@ -35,7 +35,7 @@ export class AuthService {
     return !!this.loader.storage.getItem(this.loader.storageKey);
   }
 
-  constructor(private readonly loader: AuthLoader,
+  constructor(public readonly loader: AuthLoader,
               private readonly router: Router,
               private readonly http: Http) {
     const currentUser = JSON.parse(this.loader.storage.getItem(this.loader.storageKey) || '{}');
