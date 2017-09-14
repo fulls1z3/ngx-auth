@@ -6,6 +6,8 @@ import { AuthSettings } from './src/models/auth-settings';
 import { AuthGuard } from './src/auth.guard';
 import { AuthLoader, AuthStaticLoader } from './src/auth.loader';
 import { AuthService } from './src/auth.service';
+import { AuthServerGuard } from './src/auth-server.guard';
+import { AuthServerService } from './src/auth-server.service';
 
 export * from './src/models/auth-settings';
 export * from './src/models/backend';
@@ -46,6 +48,22 @@ export class AuthModule {
   static forChild(): ModuleWithProviders {
     return {
       ngModule: AuthModule
+    };
+  }
+
+  static forServer(): ModuleWithProviders {
+    return {
+      ngModule: AuthModule,
+      providers: [
+        {
+          provide: AuthService,
+          useClass: AuthServerService
+        },
+        {
+          provide: AuthGuard,
+          useClass: AuthServerGuard
+        }
+      ]
     };
   }
 

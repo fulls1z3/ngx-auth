@@ -1,5 +1,5 @@
 # ngx-auth
-JWT authentication utility for **Angular**
+JWT authentication utility for **Angular** & **Angular Universal**
 
 [![CircleCI](https://circleci.com/gh/fulls1z3/ngx-auth.svg?style=shield)](https://circleci.com/gh/fulls1z3/ngx-auth)
 [![coverage](https://codecov.io/github/fulls1z3/ngx-auth/coverage.svg?branch=master)](https://codecov.io/gh/fulls1z3/ngx-auth)

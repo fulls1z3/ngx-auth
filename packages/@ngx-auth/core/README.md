@@ -1,5 +1,5 @@
 # @ngx-auth/core [![npm version](https://badge.fury.io/js/%40ngx-auth%2Fcore.svg)](https://www.npmjs.com/package/@ngx-auth/core) [![npm downloads](https://img.shields.io/npm/dm/%40ngx-auth%2Fcore.svg)](https://www.npmjs.com/package/@ngx-auth/core)
-JWT authentication utility for **Angular**
+JWT authentication utility for **Angular** & **Angular Universal**
 
 [![CircleCI](https://circleci.com/gh/fulls1z3/ngx-auth.svg?style=shield)](https://circleci.com/gh/fulls1z3/ngx-auth)
 [![coverage](https://codecov.io/github/fulls1z3/ngx-auth/coverage.svg?branch=master)](https://codecov.io/gh/fulls1z3/ngx-auth)
@@ -27,6 +27,8 @@ than `v4.x.x`, then you should probably choose the appropriate version of this l
   - [app.module configuration](#appmodule-config)
 - [Settings](#settings)
 	- [Setting up `AuthModule` to use `AuthStaticLoader`](#setting-up-staticloader)
+- [SPA/Browser platform implementation](#browser-platform-impl)
+- [Server platform implementation](#server-platform-impl)
 - [Usage](#usage)
 - [License](#license)
 
@@ -159,6 +161,76 @@ export function authFactory(): AuthLoader {
   - **defaultUrl**: `string` : default URL, used as a fallback route after successful authentication (*by default, `''`*)
 
 > :+1: On it! **`@ngx-auth/core`** is now ready to perform JWT-based authentication regarding the configuration above.
+
+**Note**: If your **Angular** application is performing **server-side rendering** (*Angular Universal*), then you should
+follow the steps explained below.
+
+## <a name="browser-platform-impl"></a> SPA/Browser platform implementation
+- Remove the implementation from **app.module** (*considering the app.module is the core module in Angular application*).
+- Import `AuthModule` using the mapping `'@ngx-auth/core'` and append `AuthModule.forRoot({...})` within the imports property
+of **app.browser.module** (*considering the app.browser.module is the browser module in Angular Universal application*).
+
+#### app.browser.module.ts
+```TypeScript
+...
+import { AuthModule, AuthLoader, AuthStaticLoader } from '@ngx-auth/core';
+...
+
+export function authFactory(): AuthLoader {
+  return new AuthStaticLoader({
+    backend: {
+      endpoint: '/api/authenticate',
+      params: []
+    },
+    storage: localStorage,
+    storageKey: 'currentUser',
+    loginRoute: ['login'],
+    defaultUrl: ''
+  });
+}
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    ...
+  ],
+  ...
+  imports: [
+    AuthModule.forRoot({
+      provide: AuthLoader,
+      useFactory: (authFactory)
+    }),
+    ...
+  ],
+  ...
+  bootstrap: [AppComponent]
+})
+```
+
+## <a name="server-platform-impl"></a> Server platform implementation.
+- Import `AuthModule` using the mapping `'@ngx-auth/core'` and append `AuthModule.forServer()` within the imports property
+of **app.server.module** (*considering the app.server.module is the server module in Angular Universal application*).
+
+#### app.server.module.ts
+```TypeScript
+...
+import { AuthModule } from '@ngx-auth/core';
+...
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    ...
+  ],
+  ...
+  imports: [
+    AuthModule.forServer(),
+    ...
+  ],
+  ...
+  bootstrap: [AppComponent]
+})
+```
 
 ## <a name="usage"></a> Usage
 `AuthService` has the `authenticate` and `invalidate` methods:

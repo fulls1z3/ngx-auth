@@ -114,3 +114,16 @@ export const testModuleConfig = (moduleOptions?: any) => {
       ]
     });
 };
+
+export const testServerModuleConfig = () => {
+  TestBed.resetTestEnvironment();
+
+  TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting())
+    .configureTestingModule({
+      imports: [
+        RouterTestingModule.withRoutes(testRoutes),
+        AuthModule.forServer(),
+        TestSharedModule
+      ]
+    });
+};
