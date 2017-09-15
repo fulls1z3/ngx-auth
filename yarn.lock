@@ -1530,7 +1530,7 @@ jest-changed-files@^21.1.0:
   dependencies:
     throat "^4.0.0"
 
-jest-cli@^21.1.0:
+jest-cli@^21.0.2:
   version "21.1.0"
   resolved "https://registry.yarnpkg.com/jest-cli/-/jest-cli-21.1.0.tgz#4f671885ea3521803c96a1fd95baaa6a1ba8d70f"
   dependencies:
@@ -1881,11 +1881,11 @@ jest-zone-patch@^0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/jest-zone-patch/-/jest-zone-patch-0.0.7.tgz#d963cd3eb005d500db1b41242a7a63a371a500f3"
 
-jest@~21.1.0:
-  version "21.1.0"
-  resolved "https://registry.yarnpkg.com/jest/-/jest-21.1.0.tgz#77c7baa8aa9e8bace7fe41a30d748ab56e89476a"
+jest@~21.0.2:
+  version "21.0.2"
+  resolved "https://registry.yarnpkg.com/jest/-/jest-21.0.2.tgz#a5c9bdc9d4322ae672fe8cb3eaf25c268c5f04b2"
   dependencies:
-    jest-cli "^21.1.0"
+    jest-cli "^21.0.2"
 
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
