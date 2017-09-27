@@ -36,8 +36,8 @@ export class AuthService {
   }
 
   constructor(public readonly loader: AuthLoader,
-              private readonly router: Router,
-              private readonly http: Http) {
+              protected readonly router: Router,
+              protected readonly http: Http) {
     const currentUser = JSON.parse(this.loader.storage.getItem(this.loader.storageKey) || '{}');
     this._token = currentUser && currentUser.token;
   }
@@ -78,7 +78,7 @@ export class AuthService {
     this.router.navigate(this.loader.loginRoute);
   }
 
-  private getUrlSearchParams = (params: Array<any>): URLSearchParams => {
+  protected getUrlSearchParams = (params: Array<any>): URLSearchParams => {
     const res = new URLSearchParams();
 
     for (const item of params)
