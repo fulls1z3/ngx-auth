@@ -35,7 +35,7 @@
     "@angular/http": "~4.4.4",
     "@angular/platform-browser": "~4.4.4",
     "@angular/platform-browser-dynamic": "~4.4.4",
-    "@angular/router": "~4.4.4",
+    "@angular/router": "~5.0.0",
     "core-js": "~2.5.1",
     "rxjs": "~5.4.3",
     "zone.js": "~0.8.18",
