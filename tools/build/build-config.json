@@ -4,7 +4,6 @@
       "angularVersion": 4,
       "bundle": {
         "globals": {
-          "@angular/http": "ng.http",
           "@angular/router": "ng.router",
           "rxjs/Observable": "Rx.Observable"
         },

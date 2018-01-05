@@ -1,6 +1,6 @@
 // angular
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Http, Response, URLSearchParams } from '@angular/http';
 import { Router } from '@angular/router';
 
 // libs
@@ -35,24 +35,24 @@ export class AuthService {
     return !!this.loader.storage.getItem(this.loader.storageKey);
   }
 
-  constructor(public readonly loader: AuthLoader,
+  constructor(readonly loader: AuthLoader,
               protected readonly router: Router,
-              protected readonly http: Http) {
+              protected readonly http: HttpClient) {
     const currentUser = JSON.parse(this.loader.storage.getItem(this.loader.storageKey) || '{}');
     this._token = currentUser && currentUser.token;
   }
 
   authenticate(username: string, password: string): Observable<boolean> {
-    const params = this.getUrlSearchParams(this.loader.backend.params);
+    const params = this.getHttpParams(this.loader.backend.params);
 
-    return this.http.post(this.loader.backend.endpoint,
+    return this.http.post<any>(this.loader.backend.endpoint,
       JSON.stringify({
         username,
         password
       }),
-      {search: params})
-      .map((response: Response) => {
-        const token = response.json() && response.json().token;
+      {params})
+      .map(res => {
+        const token = res && res.token;
 
         if (token) {
           this._token = token;
@@ -78,11 +78,12 @@ export class AuthService {
     this.router.navigate(this.loader.loginRoute);
   }
 
-  protected getUrlSearchParams = (params: Array<any>): URLSearchParams => {
-    const res = new URLSearchParams();
+  protected getHttpParams = (query?: Array<any>): HttpParams => {
+    let res = new HttpParams();
 
-    for (const item of params)
-      res.append(item.key, item.value);
+    if (query)
+      for (const item of query)
+        res = res.append(item.key, item.value);
 
     return res;
   };
