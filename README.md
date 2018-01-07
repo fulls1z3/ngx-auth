@@ -14,8 +14,8 @@ JWT authentication utility for **Angular** & **Angular Universal**
 and restrict unauthenticated access from accessing restricted routes.
 
 #### NOTICE
-> This *[4.x.x] branch* is intented to work with `@angular v4.x.x`. If you're developing on a later release of **Angular**
-than `v4.x.x`, then you should probably choose the appropriate version of this library by visiting the *[master] branch*.
+> This *[5.x.x] branch* is intented to work with `@angular v5.x.x`. If you're developing on a later release of **Angular**
+than `v5.x.x`, then you should probably choose the appropriate version of this library by visiting the *[master] branch*.
 
 ## Packages:
 Name | Description | NPM
@@ -36,10 +36,10 @@ If you want to file a bug, contribute some code, or improve documentation, pleas
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2017 [Burak Tasci]
+Copyright (c) 2018 [Burak Tasci]
 
 [master]: https://github.com/ngx-auth/core/tree/master
-[4.x.x]: https://github.com/ngx-auth/core/tree/4.x.x
+[5.x.x]: https://github.com/ngx-auth/core/tree/5.x.x
 [ngx-auth]: https://github.com/fulls1z3/ngx-auth
 [ng-seed/universal]: https://github.com/ng-seed/universal
 [fulls1z3/example-app]: https://github.com/fulls1z3/example-app

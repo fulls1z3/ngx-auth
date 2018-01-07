@@ -13,10 +13,7 @@ import { NODE_MODULES, root } from './helpers';
 import { inlineResources } from './inline-resources';
 
 const compilationFolder = root('.temp');
-let globals = {
-  tslib: 'tslib',
-  '@angular/core': 'ng.core'
-};
+let globals = {};
 
 const relativeCopy = (fileGlob: string, from: string, to: string) => {
   return new Promise((res, reject) => {
@@ -76,24 +73,22 @@ const build = (group: string, item: string, settings: any) => {
       // tslint:disable-next-line
       .then(() => console.log(`>>> ${group}/${item}: Inlining succeeded`))
     )
-    .then(() => ngc({project: `${paths.temp}/tsconfig.es2015.json`})
-      .then(exitCode => new Promise((res, reject) => {
-        exitCode === 0
-          ? res()
-          : reject();
-      }))
-      // tslint:disable-next-line
-      .then(() => console.log(`>>> ${group}/${item}: ES2015 compilation succeeded`))
-    )
-    .then(() => ngc({project: `${paths.temp}/tsconfig.es5.json`})
-      .then(exitCode => new Promise((res, reject) => {
-        exitCode === 0
-          ? res()
-          : reject();
-      }))
-      // tslint:disable-next-line
-      .then(() => console.log(`>>> ${group}/${item}: ES5 compilation succeeded`))
-    )
+    .then(() => ngc(['--project', `${paths.temp}/tsconfig.es2015.json`]))
+    .then(exitCode => new Promise((res, reject) => {
+      exitCode === 0
+        ? res()
+        : reject();
+    }))
+    // tslint:disable-next-line
+    .then(() => console.log(`>>> ${group}/${item}: ES2015 compilation succeeded`))
+    .then(() => ngc(['--project', `${paths.temp}/tsconfig.es5.json`]))
+    .then(exitCode => new Promise((res, reject) => {
+      exitCode === 0
+        ? res()
+        : reject();
+    }))
+    // tslint:disable-next-line
+    .then(() => console.log(`>>> ${group}/${item}: ES5 compilation succeeded`))
     .then(() => Promise.resolve()
       .then(() => relativeCopy('**/*.d.ts', paths.es2015, paths.dist))
       .then(() => relativeCopy('**/*.metadata.json', paths.es2015, paths.dist))

@@ -10,10 +10,12 @@ import { AuthTestingModule } from '../testing/auth.testing.module';
 import { AuthGuard, AuthModule, AuthSettings } from '../index';
 
 @Component({template: '<router-outlet></router-outlet>'})
+// tslint:disable-next-line
 export class TestBootstrapComponent {
 }
 
 @Component({template: ''})
+// tslint:disable-next-line
 export class TestComponent {
 }
 
@@ -24,6 +26,7 @@ export class TestComponent {
     TestComponent
   ]
 })
+// tslint:disable-next-line
 class TestSharedModule {
 }
 
@@ -40,6 +43,7 @@ const testLazyRoutes: Routes = [
     TestSharedModule
   ]
 })
+// tslint:disable-next-line
 class TestLazyModule {
 }
 
@@ -109,7 +113,7 @@ export const testModuleConfig = (moduleOptions?: any) => {
       imports: [
         RouterTestingModule.withRoutes(testRoutes),
         AuthModule.forRoot(moduleOptions),
-        AuthTestingModule.withPath('/api/authenticate'),
+        AuthTestingModule.withParams(moduleOptions, '/api/authenticate'),
         TestSharedModule
       ]
     });

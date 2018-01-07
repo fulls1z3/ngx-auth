@@ -1,17 +1,21 @@
 // angular
 import { InjectionToken, ModuleWithProviders, NgModule } from '@angular/core';
-import { BaseRequestOptions, Http } from '@angular/http';
-import { MockBackend } from '@angular/http/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 // module
-import { AuthModule } from '../index';
-import { fakeBackendFactory } from './mocks/auth-backend.mock';
+import { authFactory, AuthModule } from '../index';
+import { MockBackendInterceptor } from './mocks/backend-interceptor.mock';
+import { MockJwtInterceptor } from './mocks/jwt-interceptor.mock';
+import { AuthLoader } from '../src/auth.loader';
 
-export * from './mocks/auth-backend.mock';
+export * from './mocks/backend-interceptor.mock';
+export * from './mocks/jwt-interceptor.mock';
 
 export const MOCK_AUTH_PATH = new InjectionToken<string>('MOCK_AUTH_PATH');
 
 @NgModule({
+  imports: [HttpClientTestingModule],
   exports: [AuthModule],
   providers: [
     {
@@ -19,23 +23,33 @@ export const MOCK_AUTH_PATH = new InjectionToken<string>('MOCK_AUTH_PATH');
       useValue: '/api/authenticate'
     },
     {
-      provide: Http,
-      useFactory: fakeBackendFactory,
-      deps: [
-        MockBackend,
-        BaseRequestOptions,
-        MOCK_AUTH_PATH
-      ]
+      provide: AuthLoader,
+      useFactory: (authFactory)
     },
-    MockBackend,
-    BaseRequestOptions
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: MockBackendInterceptor,
+      deps: [MOCK_AUTH_PATH],
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: MockJwtInterceptor,
+      deps: [AuthLoader],
+      multi: true
+    }
   ]
 })
 export class AuthTestingModule {
-  static withPath(path: string): ModuleWithProviders {
+  static withParams(configuredProvider: any = {
+                      provide: AuthLoader,
+                      useFactory: (authFactory)
+                    },
+                    path: string): ModuleWithProviders {
     return {
       ngModule: AuthTestingModule,
       providers: [
+        configuredProvider,
         {
           provide: MOCK_AUTH_PATH,
           useValue: path

@@ -4,7 +4,6 @@ import { Injectable } from '@angular/core';
 // libs
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
-import 'rxjs/add/operator/map';
 
 @Injectable()
 export class AuthServerService {

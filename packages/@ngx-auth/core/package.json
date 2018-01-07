@@ -1,6 +1,6 @@
 {
   "name": "@ngx-auth/core",
-  "version": "4.1.0",
+  "version": "5.0.0",
   "description": "JWT authentication utility for Angular & Angular Universal",
   "repository": {
     "type": "git",
@@ -29,12 +29,13 @@
   "es2015": "./@ngx-auth/core.js",
   "typings": "./core.d.ts",
   "dependencies": {
-    "tslib": "~1.7.1"
+    "tslib": "~1.8.1"
   },
   "peerDependencies": {
-    "@angular/core": ">=4.0.0 <5.0.0",
-    "@angular/http": ">=4.0.0 <5.0.0",
-    "@angular/router": ">=4.0.0 <5.0.0",
+    "@angular/common": ">=5.0.0 <6.0.0",
+    "@angular/core": ">=5.0.0 <6.0.0",
+    "@angular/platform-browser-dynamic": ">=5.0.0 <6.0.0",
+    "@angular/router": ">=5.0.0 <6.0.0",
     "rxjs": ">=5.0.1"
   }
 }
