@@ -113,7 +113,7 @@ export const testModuleConfig = (moduleOptions?: any) => {
       imports: [
         RouterTestingModule.withRoutes(testRoutes),
         AuthModule.forRoot(moduleOptions),
-        AuthTestingModule.withPath(moduleOptions, '/api/authenticate'),
+        AuthTestingModule.withParams(moduleOptions, '/api/authenticate'),
         TestSharedModule
       ]
     });

@@ -9,12 +9,12 @@ import { Observable } from 'rxjs/Observable';
 import { AuthLoader } from '../../src/auth.loader';
 
 @Injectable()
-export class FakeJwtInterceptor implements HttpInterceptor {
+export class MockJwtInterceptor implements HttpInterceptor {
   constructor(private readonly loader: AuthLoader) {
   }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const token = this.loader.storage.getItem(this.loader.storageKey);
+    const token = JSON.parse(this.loader.storage.getItem(this.loader.storageKey)).token;
 
     if (token)
       request = request.clone({

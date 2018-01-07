@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 
 @Injectable()
-export class FakeBackendInterceptor implements HttpInterceptor {
+export class MockBackendInterceptor implements HttpInterceptor {
   constructor(private readonly path: string) {
   }
 

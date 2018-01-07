@@ -1,6 +1,6 @@
 // angular
+import { Inject, Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
 // libs
@@ -37,7 +37,7 @@ export class AuthService {
 
   constructor(readonly loader: AuthLoader,
               protected readonly router: Router,
-              protected readonly http: HttpClient) {
+              @Inject(HttpClient) protected readonly http: HttpClient) {
     const currentUser = JSON.parse(this.loader.storage.getItem(this.loader.storageKey) || '{}');
     this._token = currentUser && currentUser.token;
   }

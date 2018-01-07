@@ -5,8 +5,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 // module
 import { authFactory, AuthModule } from '../index';
-import { FakeBackendInterceptor } from './mocks/backend-interceptor.mock';
-import { FakeJwtInterceptor } from './mocks/jwt-interceptor.mock';
+import { MockBackendInterceptor } from './mocks/backend-interceptor.mock';
+import { MockJwtInterceptor } from './mocks/jwt-interceptor.mock';
 import { AuthLoader } from '../src/auth.loader';
 
 export * from './mocks/backend-interceptor.mock';
@@ -28,24 +28,24 @@ export const MOCK_AUTH_PATH = new InjectionToken<string>('MOCK_AUTH_PATH');
     },
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: FakeBackendInterceptor,
+      useClass: MockBackendInterceptor,
       deps: [MOCK_AUTH_PATH],
       multi: true
     },
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: FakeJwtInterceptor,
+      useClass: MockJwtInterceptor,
       deps: [AuthLoader],
       multi: true
     }
   ]
 })
 export class AuthTestingModule {
-  static withPath(configuredProvider: any = {
-                    provide: AuthLoader,
-                    useFactory: (authFactory)
-                  },
-                  path: string): ModuleWithProviders {
+  static withParams(configuredProvider: any = {
+                      provide: AuthLoader,
+                      useFactory: (authFactory)
+                    },
+                    path: string): ModuleWithProviders {
     return {
       ngModule: AuthTestingModule,
       providers: [
