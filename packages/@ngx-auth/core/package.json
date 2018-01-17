@@ -1,6 +1,6 @@
 {
   "name": "@ngx-auth/core",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "description": "JWT authentication utility for Angular & Angular Universal",
   "repository": {
     "type": "git",

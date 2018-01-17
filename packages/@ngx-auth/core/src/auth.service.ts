@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 
 // libs
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
+import { map } from 'rxjs/operators';
 
 // module
 import { AuthLoader } from './auth.loader';
@@ -51,25 +51,27 @@ export class AuthService {
         password
       }),
       {params})
-      .map(res => {
-        const token = res && res.token;
+      .pipe(
+        map(res => {
+          const token = res && res.token;
 
-        if (token) {
-          this._token = token;
+          if (token) {
+            this._token = token;
 
-          this.loader.storage.setItem(this.loader.storageKey,
-            JSON.stringify({
-              username,
-              token
-            }));
+            this.loader.storage.setItem(this.loader.storageKey,
+              JSON.stringify({
+                username,
+                token
+              }));
 
-          this.router.navigateByUrl(this._redirectUrl || this.loader.defaultUrl);
+            this.router.navigateByUrl(this._redirectUrl || this.loader.defaultUrl);
 
-          return true;
-        }
+            return true;
+          }
 
-        return false;
-      });
+          return false;
+        })
+      );
   }
 
   invalidate(): void {

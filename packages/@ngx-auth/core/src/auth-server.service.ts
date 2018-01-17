@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 // libs
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/of';
+import { of as observableOf } from 'rxjs/observable/of';
 
 @Injectable()
 export class AuthServerService {
@@ -28,7 +28,7 @@ export class AuthServerService {
   }
 
   authenticate(username: string, password: string): Observable<boolean> {
-    return Observable.of(false);
+    return observableOf(false);
   }
 
   invalidate(): void {
