@@ -1,7 +1,7 @@
 {
-  "name": "@ngx-auth/core",
+  "name": "@ngx-auth/auth0",
   "version": "5.1.0",
-  "description": "JWT authentication utility for Angular & Angular Universal",
+  "description": "Auth0 platform implementation of ngx-auth",
   "repository": {
     "type": "git",
     "url": "https://github.com/fulls1z3/ngx-auth.git"
@@ -23,11 +23,11 @@
   "bugs": {
     "url": "https://github.com/fulls1z3/ngx-auth/issues"
   },
-  "homepage": "https://github.com/fulls1z3/ngx-auth/tree/master/packages/@ngx-auth/core#readme",
-  "main": "./bundles/core.umd.js",
-  "module": "./@ngx-auth/core.es5.js",
-  "es2015": "./@ngx-auth/core.js",
-  "typings": "./core.d.ts",
+  "homepage": "https://github.com/fulls1z3/ngx-auth/tree/master/packages/@ngx-auth/auth0#readme",
+  "main": "./bundles/auth0.umd.js",
+  "module": "./@ngx-auth/auth0.es5.js",
+  "es2015": "./@ngx-auth/auth0.js",
+  "typings": "./auth0.d.ts",
   "dependencies": {
     "tslib": "~1.8.1"
   },
@@ -36,6 +36,8 @@
     "@angular/core": ">=5.0.0 <6.0.0",
     "@angular/platform-browser-dynamic": ">=5.0.0 <6.0.0",
     "@angular/router": ">=5.0.0 <6.0.0",
-    "rxjs": ">=5.0.1"
+    "rxjs": ">=5.0.1",
+    "auth0-js": ">=9.0.0",
+    "@ngx-auth/core": ">=5.0.0 <6.0.0"
   }
 }

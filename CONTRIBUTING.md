@@ -173,6 +173,7 @@ The scope should be the name of the project affected.
 
 The following is the list of supported scopes:
 * **core**
+* **auth0**
 
 There are currently a few exceptions to the "use project name" rule:
 

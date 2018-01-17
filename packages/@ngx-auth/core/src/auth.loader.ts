@@ -3,7 +3,7 @@ import { AuthSettings } from './models/auth-settings';
 import { Backend } from './models/backend';
 
 export abstract class AuthLoader {
-  abstract get backend(): Backend;
+  abstract get backend(): any;
 
   abstract get storage(): any;
 

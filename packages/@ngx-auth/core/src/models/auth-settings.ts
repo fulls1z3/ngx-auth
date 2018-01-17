@@ -1,3 +1,4 @@
+// module
 import { Backend } from './backend';
 
 export interface AuthSettings {

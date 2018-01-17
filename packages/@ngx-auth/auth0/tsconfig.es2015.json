@@ -1,0 +1,37 @@
+{
+  "extends": "../../../../tsconfig.json",
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "es2015",
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "importHelpers": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "declaration": true,
+    "removeComments": true,
+    "stripInternal": true,
+    "outDir": "../../../../.temp/packages/@ngx-auth/auth0-es2015/",
+    "rootDir": "./",
+    "baseUrl": "",
+    "paths": {
+      "@ngx-auth/core": ["../../../../dist/@ngx-auth/core"]
+    },
+    "typeRoots": ["../../../../node_modules/@types"],
+    "types": ["node"],
+    "lib": [
+      "es2015",
+      "dom"
+    ]
+  },
+  "include": [],
+  "files": ["./index.ts"],
+  "angularCompilerOptions": {
+    "annotateForClosureCompiler": true,
+    "strictMetadataEmit": true,
+    "skipTemplateCodegen": true,
+    "flatModuleOutFile": "auth0.js",
+    "flatModuleId": "@ngx-auth/auth0",
+    "genDir": "../../../../.temp/gen-dir/"
+  }
+}

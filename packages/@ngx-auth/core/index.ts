@@ -11,6 +11,7 @@ import { AuthServerService } from './src/auth-server.service';
 
 export * from './src/models/auth-settings';
 export * from './src/models/backend';
+export * from './src/auth-server.guard';
 export * from './src/auth.guard';
 export * from './src/auth.loader';
 export * from './src/auth.service';

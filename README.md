@@ -1,5 +1,5 @@
 # ngx-auth
-JWT authentication utility for **Angular** & **Angular Universal**
+**[Auth0]** platform implementation and JWT authentication utility for **Angular** & **Angular Universal**
 
 [![CircleCI](https://circleci.com/gh/fulls1z3/ngx-auth.svg?style=shield)](https://circleci.com/gh/fulls1z3/ngx-auth)
 [![coverage](https://codecov.io/github/fulls1z3/ngx-auth/coverage.svg?branch=master)](https://codecov.io/gh/fulls1z3/ngx-auth)
@@ -13,6 +13,8 @@ JWT authentication utility for **Angular** & **Angular Universal**
 **`@ngx-auth/core`** is a basic JWT-based authentication utility used for logging in and out of the **Angular** application
 and restrict unauthenticated access from accessing restricted routes.
 
+As of version **`5.1.0`**, the library contains **[Auth0]** implementation.
+
 #### NOTICE
 > This *[5.x.x] branch* is intented to work with `@angular v5.x.x`. If you're developing on a later release of **Angular**
 than `v5.x.x`, then you should probably choose the appropriate version of this library by visiting the *[master] branch*.
@@ -21,6 +23,7 @@ than `v5.x.x`, then you should probably choose the appropriate version of this l
 Name | Description | NPM
 --- | --- | ---
 [@ngx-auth/core](https://github.com/fulls1z3/ngx-auth/tree/master/packages/@ngx-auth/core) | Authentication utility for **Angular** | [![npm version](https://badge.fury.io/js/%40ngx-auth%2Fcore.svg)](https://www.npmjs.com/package/@ngx-auth/core)
+[@ngx-auth/auth0](https://github.com/fulls1z3/ngx-auth/tree/master/packages/@ngx-auth/auth0) | **[Auth0]** platform implementation of **[ngx-auth]** | [![npm version](https://badge.fury.io/js/%40ngx-auth%2Fauth0.svg)](https://www.npmjs.com/package/@ngx-auth/auth0)
 
 ## Examples
 - [ng-seed/universal] and [fulls1z3/example-app] are officially maintained projects, showcasing common patterns and best
@@ -43,4 +46,5 @@ Copyright (c) 2018 [Burak Tasci]
 [ngx-auth]: https://github.com/fulls1z3/ngx-auth
 [ng-seed/universal]: https://github.com/ng-seed/universal
 [fulls1z3/example-app]: https://github.com/fulls1z3/example-app
+[Auth0]: https://auth0.com
 [Burak Tasci]: https://github.com/fulls1z3
