@@ -6,6 +6,10 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
+    "baseUrl": "",
+    "paths": {
+      "@ngx-auth/core": ["./packages/@ngx-auth/core"]
+    },
     "lib": [
       "es2017",
       "dom"
