@@ -2,8 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="5.1.0"></a>
+# [5.1.0](https://github.com/fulls1z3/ngx-auth/compare/v5.0.0...v5.1.0) (2018-01-17)
+
+
+### Bug Fixes
+
+* **npm:** fix lint script ([#78](https://github.com/fulls1z3/ngx-auth/issues/78)) ([92d6f80](https://github.com/fulls1z3/ngx-auth/commit/92d6f80))
+
+
+### Features
+
+* **auth0:** add Auth0 implementation ([#79](https://github.com/fulls1z3/ngx-auth/issues/79)) ([d65bfe5](https://github.com/fulls1z3/ngx-auth/commit/d65bfe5))
+
+
+
 <a name="5.0.0"></a>
-# [5.0.0](https://github.com/fulls1z3/ngx-auth/compare/v4.0.0...v5.0.0) (2018-01-07)
+# [5.0.0](https://github.com/fulls1z3/ngx-auth/compare/v4.1.0...v5.0.0) (2018-01-07)
 
 
 ### Features
