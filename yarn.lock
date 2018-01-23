@@ -59,9 +59,9 @@
   version "8.11.1"
   resolved "https://registry.yarnpkg.com/@types/auth0-js/-/auth0-js-8.11.1.tgz#50c52fd752b28e5ec7ce9913f5162ae0c07a8b3f"
 
-"@types/jest@~22.0.1":
-  version "22.0.1"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-22.0.1.tgz#6370a6d60cce3845e4cd5d00bf65f654264685bc"
+"@types/jest@22.1.0":
+  version "22.1.0"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-22.1.0.tgz#c1de03bbac66fac4cc741f7a69cb73bc01a1707c"
 
 "@types/node@^6.0.46":
   version "6.0.88"
