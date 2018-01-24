@@ -59,9 +59,9 @@
   version "8.11.1"
   resolved "https://registry.yarnpkg.com/@types/auth0-js/-/auth0-js-8.11.1.tgz#50c52fd752b28e5ec7ce9913f5162ae0c07a8b3f"
 
-"@types/jest@~22.0.1":
-  version "22.0.1"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-22.0.1.tgz#6370a6d60cce3845e4cd5d00bf65f654264685bc"
+"@types/jest@22.1.0":
+  version "22.1.0"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-22.1.0.tgz#c1de03bbac66fac4cc741f7a69cb73bc01a1707c"
 
 "@types/node@^6.0.46":
   version "6.0.88"
@@ -136,9 +136,9 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
-angular-tslint-rules@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/angular-tslint-rules/-/angular-tslint-rules-1.1.0.tgz#5015e86f9f83cc2619b7ab67fd872b033b6e638f"
+angular-tslint-rules@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/angular-tslint-rules/-/angular-tslint-rules-1.2.0.tgz#e3d3a553610a1d3aaa4c9642dec1f51fa744d7e8"
 
 ansi-escapes@^3.0.0:
   version "3.0.0"
