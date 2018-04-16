@@ -42,7 +42,7 @@
     "auth0-js": "~9.1.0",
     "@types/auth0-js": "~8.11.1",
     "@types/node": "~9.4.0",
-    "@types/jest": "~22.1.0",
+    "@types/jest": "~22.2.0",
     "rimraf": "~2.6.2",
     "ts-node": "~4.1.0",
     "glob": "~7.1.2",
