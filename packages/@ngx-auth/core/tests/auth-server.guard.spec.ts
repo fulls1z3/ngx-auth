@@ -19,15 +19,18 @@ describe('@ngx-auth/core:',
 
               router.navigate(['/'])
                 .then(() => {
-                  expect(router.url).toEqual('/');
+                  expect(router.url)
+                    .toEqual('/');
 
                   router.navigate(['/activate-page'])
                     .then(() => {
-                      expect(router.url).toEqual('/');
+                      expect(router.url)
+                        .toEqual('/');
 
                       router.navigate(['/activate-feature'])
                         .then(() => {
-                          expect(router.url).toEqual('/');
+                          expect(router.url)
+                            .toEqual('/');
                         });
                     });
                 });
@@ -41,11 +44,13 @@ describe('@ngx-auth/core:',
 
               router.navigate(['/'])
                 .then(() => {
-                  expect(router.url).toEqual('/');
+                  expect(router.url)
+                    .toEqual('/');
 
                   router.navigate(['/load-page'])
                     .then(() => {
-                      expect(router.url).toEqual('/');
+                      expect(router.url)
+                        .toEqual('/');
                     });
                 });
             }));

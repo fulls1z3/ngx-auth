@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 
 // libs
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 // module
 import { AuthLoader } from '../../src/auth.loader';

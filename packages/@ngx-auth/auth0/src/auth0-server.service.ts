@@ -2,9 +2,7 @@
 import { Injectable } from '@angular/core';
 
 // libs
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { Observable } from 'rxjs/Observable';
-import { of as observableOf } from 'rxjs/observable/of';
+import { BehaviorSubject, Observable, of as observableOf } from 'rxjs';
 
 @Injectable()
 export class Auth0ServerService {

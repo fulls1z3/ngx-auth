@@ -22,16 +22,20 @@ describe('@ngx-auth/auth0:',
             (auth: Auth0Service) => {
               auth.authorize();
 
-              expect(Auth0Service).toBeDefined();
-              expect(auth).toBeDefined();
-              expect(auth instanceof Auth0ServerService).toBeTruthy();
+              expect(Auth0Service)
+                .toBeDefined();
+              expect(auth)
+                .toBeDefined();
+              expect(auth instanceof Auth0ServerService)
+                .toBeTruthy();
             }));
 
         it('should be able to return an undefined `defaultUrl`',
           inject([Auth0Service],
             (auth: Auth0Service) => {
               const res = auth.defaultUrl;
-              expect(res).toBeUndefined();
+              expect(res)
+                .toBeUndefined();
             }));
 
         it('should not authenticate',
@@ -39,23 +43,29 @@ describe('@ngx-auth/auth0:',
             (auth: Auth0Service) => {
               auth.authenticate()
                 .subscribe(res => {
-                  expect(res).toEqual(false);
+                  expect(res)
+                    .toEqual(false);
 
                   const accessToken = auth.accessToken;
-                  expect(accessToken).toBeUndefined();
+                  expect(accessToken)
+                    .toBeUndefined();
 
                   const idToken = auth.idToken;
-                  expect(idToken).toBeUndefined();
+                  expect(idToken)
+                    .toBeUndefined();
 
                   const expiresAt = auth.expiresAt;
-                  expect(expiresAt).toBeUndefined();
+                  expect(expiresAt)
+                    .toBeUndefined();
 
                   const isAuthenticated = auth.isAuthenticated;
-                  expect(isAuthenticated).toEqual(false);
+                  expect(isAuthenticated)
+                    .toEqual(false);
 
                   const isAuthenticated$ = auth.isAuthenticated$;
                   isAuthenticated$.subscribe(isAuth => {
-                    expect(isAuth).toEqual(false);
+                    expect(isAuth)
+                      .toEqual(false);
                   });
                 });
             })));
