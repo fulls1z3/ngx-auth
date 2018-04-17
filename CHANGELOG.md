@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="6.0.0-rc.1"></a>
+# [6.0.0-rc.1](https://github.com/fulls1z3/ngx-auth/compare/v5.1.0...v6.0.0-rc.1) (2018-04-17)
+
+
+### Features
+
+* **core:** upgrade to angular 6 ([d79518e](https://github.com/fulls1z3/ngx-auth/commit/d79518e))
+
+
+
 <a name="5.1.0"></a>
 # [5.1.0](https://github.com/fulls1z3/ngx-auth/compare/v5.0.0...v5.1.0) (2018-01-17)
 
