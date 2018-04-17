@@ -20,16 +20,20 @@ describe('@ngx-auth/core:',
         it('is defined',
           inject([AuthService],
             (auth: AuthService) => {
-              expect(AuthService).toBeDefined();
-              expect(auth).toBeDefined();
-              expect(auth instanceof AuthServerService).toBeTruthy();
+              expect(AuthService)
+                .toBeDefined();
+              expect(auth)
+                .toBeDefined();
+              expect(auth instanceof AuthServerService)
+                .toBeTruthy();
             }));
 
         it('should be able to return an undefined `defaultUrl`',
           inject([AuthService],
             (auth: AuthService) => {
               const res = auth.defaultUrl;
-              expect(res).toBeUndefined();
+              expect(res)
+                .toBeUndefined();
             }));
 
         it('should not authenticate',
@@ -37,17 +41,21 @@ describe('@ngx-auth/core:',
             (auth: AuthService) => {
               auth.authenticate('valid', 'valid')
                 .subscribe(res => {
-                  expect(res).toEqual(false);
+                  expect(res)
+                    .toEqual(false);
 
                   const token = auth.token;
-                  expect(token).toBeUndefined();
+                  expect(token)
+                    .toBeUndefined();
 
                   auth.redirectUrl = 'testUrl';
                   const redirectUrl = auth.redirectUrl;
-                  expect(redirectUrl).toBeUndefined();
+                  expect(redirectUrl)
+                    .toBeUndefined();
 
                   const isAuthenticated = auth.isAuthenticated;
-                  expect(isAuthenticated).toEqual(false);
+                  expect(isAuthenticated)
+                    .toEqual(false);
                 });
             }));
       });

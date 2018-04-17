@@ -33,16 +33,20 @@ describe('@ngx-auth/auth0:',
             (auth: Auth0Service) => {
               auth.authorize();
 
-              expect(Auth0Service).toBeDefined();
-              expect(auth).toBeDefined();
-              expect(auth instanceof Auth0Service).toBeTruthy();
+              expect(Auth0Service)
+                .toBeDefined();
+              expect(auth)
+                .toBeDefined();
+              expect(auth instanceof Auth0Service)
+                .toBeTruthy();
             }));
 
         it('should be able to return the `defaultUrl`',
           inject([Auth0Service],
             (auth: Auth0Service) => {
               const res = auth.defaultUrl;
-              expect(res).toEqual('');
+              expect(res)
+                .toEqual('');
             }));
 
         it('should be able to authenticate w/valid combination',
@@ -53,19 +57,24 @@ describe('@ngx-auth/auth0:',
 
               auth.authenticate()
                 .subscribe(res => {
-                  expect(res).toEqual(true);
+                  expect(res)
+                    .toEqual(true);
 
                   const accessToken = auth.accessToken;
-                  expect(accessToken).toBeDefined();
+                  expect(accessToken)
+                    .toBeDefined();
 
                   const idToken = auth.idToken;
-                  expect(idToken).toBeDefined();
+                  expect(idToken)
+                    .toBeDefined();
 
                   const expiresAt = auth.expiresAt;
-                  expect(expiresAt).toBeDefined();
+                  expect(expiresAt)
+                    .toBeDefined();
 
                   const isAuthenticated = auth.isAuthenticated;
-                  expect(isAuthenticated).toEqual(true);
+                  expect(isAuthenticated)
+                    .toEqual(true);
                 });
             })));
 
@@ -77,19 +86,24 @@ describe('@ngx-auth/auth0:',
 
               auth.authenticate()
                 .subscribe(res => {
-                  expect(res).toEqual(false);
+                  expect(res)
+                    .toEqual(false);
 
                   const accessToken = auth.accessToken;
-                  expect(accessToken).toBeUndefined();
+                  expect(accessToken)
+                    .toBeUndefined();
 
                   const idToken = auth.idToken;
-                  expect(idToken).toBeUndefined();
+                  expect(idToken)
+                    .toBeUndefined();
 
                   const expiresAt = auth.expiresAt;
-                  expect(expiresAt).toBeUndefined();
+                  expect(expiresAt)
+                    .toBeUndefined();
 
                   const isAuthenticated = auth.isAuthenticated;
-                  expect(isAuthenticated).toEqual(false);
+                  expect(isAuthenticated)
+                    .toEqual(false);
                 });
             })));
       });

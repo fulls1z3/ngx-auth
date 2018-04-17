@@ -6,7 +6,7 @@ import { Routes } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 
 // libs
-import { AuthGuard, AuthModule } from '@ngx-auth/core';
+import { AuthGuard } from '@ngx-auth/core';
 
 // module
 import { Auth0Module, Auth0Settings } from '../index';

@@ -25,20 +25,16 @@
     "url": "https://github.com/fulls1z3/ngx-auth/issues"
   },
   "homepage": "https://github.com/fulls1z3/ngx-auth/tree/master/packages/@ngx-auth/auth0#readme",
-  "main": "./bundles/auth0.umd.js",
-  "module": "./@ngx-auth/auth0.es5.js",
-  "es2015": "./@ngx-auth/auth0.js",
-  "typings": "./auth0.d.ts",
   "dependencies": {
-    "tslib": "~1.8.1"
+    "tslib": "~1.9.0"
   },
   "peerDependencies": {
-    "@angular/common": ">=5.0.0 <6.0.0",
-    "@angular/core": ">=5.0.0 <6.0.0",
-    "@angular/platform-browser-dynamic": ">=5.0.0 <6.0.0",
-    "@angular/router": ">=5.0.0 <6.0.0",
-    "rxjs": ">=5.0.1",
+    "@angular/common": ">=6.0.0 <7.0.0",
+    "@angular/core": ">=6.0.0 <7.0.0",
+    "@angular/platform-browser-dynamic": ">=6.0.0 <7.0.0",
+    "@angular/router": ">=6.0.0 <7.0.0",
+    "rxjs": ">=6.0.0",
     "auth0-js": ">=9.0.0",
-    "@ngx-auth/core": ">=5.0.0 <6.0.0"
+    "@ngx-auth/core": ">=6.0.0 <7.0.0"
   }
 }

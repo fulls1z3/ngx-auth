@@ -3,9 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
 // libs
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { Observable } from 'rxjs/Observable';
-import { fromPromise as observableFromPromise } from 'rxjs/observable/fromPromise';
+import { BehaviorSubject, from as observableFrom, Observable } from 'rxjs';
 import * as auth0js from 'auth0-js';
 import { AuthLoader } from '@ngx-auth/core';
 
@@ -86,7 +84,7 @@ export class Auth0Service {
       });
     });
 
-    return observableFromPromise<boolean>(res$);
+    return observableFrom<boolean>(res$);
   }
 
   invalidate(): void {

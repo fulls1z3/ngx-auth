@@ -2,8 +2,7 @@
 import { Injectable } from '@angular/core';
 
 // libs
-import { Observable } from 'rxjs/Observable';
-import { of as observableOf } from 'rxjs/observable/of';
+import { Observable, of as observableOf } from 'rxjs';
 
 @Injectable()
 export class AuthServerService {

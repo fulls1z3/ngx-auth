@@ -3,8 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse } from '@angular/common/http';
 
 // libs
-import { Observable } from 'rxjs/Observable';
-import { of as observableOf } from 'rxjs/observable/of';
+import { Observable, of as observableOf } from 'rxjs';
 
 @Injectable()
 export class MockBackendInterceptor implements HttpInterceptor {
@@ -12,7 +11,8 @@ export class MockBackendInterceptor implements HttpInterceptor {
   }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    if (request.url.split('?')[0].endsWith(this.path) && request.method === 'POST') {
+    if (request.url.split('?')[0]
+      .endsWith(this.path) && request.method === 'POST') {
       const testUser: any = {
         username: 'valid',
         password: 'valid'

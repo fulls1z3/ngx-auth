@@ -22,32 +22,46 @@ describe('@ngx-auth/core:',
           () => {
             const loader = new AuthStaticLoader();
 
-            expect(loader.backend.endpoint).toEqual(testSettings.backend.endpoint);
-            expect(loader.backend.params).toEqual([]);
-            expect(loader.storage).toEqual(testSettings.storage);
-            expect(loader.storageKey).toEqual(testSettings.storageKey);
-            expect(loader.loginRoute).toEqual(testSettings.loginRoute);
-            expect(loader.defaultUrl).toEqual(testSettings.defaultUrl);
+            expect(loader.backend.endpoint)
+              .toEqual(testSettings.backend.endpoint);
+            expect(loader.backend.params)
+              .toEqual([]);
+            expect(loader.storage)
+              .toEqual(testSettings.storage);
+            expect(loader.storageKey)
+              .toEqual(testSettings.storageKey);
+            expect(loader.loginRoute)
+              .toEqual(testSettings.loginRoute);
+            expect(loader.defaultUrl)
+              .toEqual(testSettings.defaultUrl);
           });
 
         it('should be able to return custom authSettings',
           () => {
             const loader = new AuthStaticLoader(testSettings);
 
-            expect(loader.backend).toEqual(testSettings.backend);
-            expect(loader.storage).toEqual(testSettings.storage);
-            expect(loader.storageKey).toEqual(testSettings.storageKey);
-            expect(loader.loginRoute).toEqual(testSettings.loginRoute);
-            expect(loader.defaultUrl).toEqual(testSettings.defaultUrl);
+            expect(loader.backend)
+              .toEqual(testSettings.backend);
+            expect(loader.storage)
+              .toEqual(testSettings.storage);
+            expect(loader.storageKey)
+              .toEqual(testSettings.storageKey);
+            expect(loader.loginRoute)
+              .toEqual(testSettings.loginRoute);
+            expect(loader.defaultUrl)
+              .toEqual(testSettings.defaultUrl);
           });
 
         it('should be able to provide `AuthStaticLoader`',
           () => {
             const auth = TestBed.get(AuthService);
 
-            expect(AuthStaticLoader).toBeDefined();
-            expect(auth.loader).toBeDefined();
-            expect(auth.loader instanceof AuthStaticLoader).toBeTruthy();
+            expect(AuthStaticLoader)
+              .toBeDefined();
+            expect(auth.loader)
+              .toBeDefined();
+            expect(auth.loader instanceof AuthStaticLoader)
+              .toBeTruthy();
           });
 
         it('should be able to provide any `AuthLoader`',
@@ -81,9 +95,12 @@ describe('@ngx-auth/core:',
 
             const auth = TestBed.get(AuthService);
 
-            expect(CustomLoader).toBeDefined();
-            expect(auth.loader).toBeDefined();
-            expect(auth.loader instanceof CustomLoader).toBeTruthy();
+            expect(CustomLoader)
+              .toBeDefined();
+            expect(auth.loader)
+              .toBeDefined();
+            expect(auth.loader instanceof CustomLoader)
+              .toBeTruthy();
           });
       });
   });

@@ -26,16 +26,20 @@ describe('@ngx-auth/core:',
         it('is defined',
           inject([AuthService],
             (auth: AuthService) => {
-              expect(AuthService).toBeDefined();
-              expect(auth).toBeDefined();
-              expect(auth instanceof AuthService).toBeTruthy();
+              expect(AuthService)
+                .toBeDefined();
+              expect(auth)
+                .toBeDefined();
+              expect(auth instanceof AuthService)
+                .toBeTruthy();
             }));
 
         it('should be able to return the `defaultUrl`',
           inject([AuthService],
             (auth: AuthService) => {
               const res = auth.defaultUrl;
-              expect(res).toEqual('');
+              expect(res)
+                .toEqual('');
             }));
 
         it('should be able to authenticate w/valid combination',
@@ -46,16 +50,20 @@ describe('@ngx-auth/core:',
 
               auth.authenticate('valid', 'valid')
                 .subscribe(res => {
-                  expect(res).toEqual(true);
+                  expect(res)
+                    .toEqual(true);
 
                   const token = auth.token;
-                  expect(token).toBeDefined();
+                  expect(token)
+                    .toBeDefined();
 
                   const redirectUrl = auth.redirectUrl;
-                  expect(redirectUrl).toBeUndefined();
+                  expect(redirectUrl)
+                    .toBeUndefined();
 
                   const isAuthenticated = auth.isAuthenticated;
-                  expect(isAuthenticated).toEqual(true);
+                  expect(isAuthenticated)
+                    .toEqual(true);
                 });
             }));
 
@@ -67,16 +75,20 @@ describe('@ngx-auth/core:',
 
               auth.authenticate('invalid', 'invalid')
                 .subscribe(res => {
-                  expect(res).toEqual(false);
+                  expect(res)
+                    .toEqual(false);
 
                   const token = auth.token;
-                  expect(token).toBeUndefined();
+                  expect(token)
+                    .toBeUndefined();
 
                   const redirectUrl = auth.redirectUrl;
-                  expect(redirectUrl).toBeUndefined();
+                  expect(redirectUrl)
+                    .toBeUndefined();
 
                   const isAuthenticated = auth.isAuthenticated;
-                  expect(isAuthenticated).toEqual(false);
+                  expect(isAuthenticated)
+                    .toEqual(false);
                 });
             }));
       });

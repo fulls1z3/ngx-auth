@@ -16,8 +16,8 @@ and restrict unauthenticated access from accessing restricted routes.
 As of version **`5.1.0`**, the library contains **[Auth0]** implementation.
 
 #### NOTICE
-> This *[5.x.x] branch* is intented to work with `@angular v5.x.x`. If you're developing on a later release of **Angular**
-than `v5.x.x`, then you should probably choose the appropriate version of this library by visiting the *[master] branch*.
+> This *[6.x.x] branch* is intented to work with `Angular v6.x.x`. If you're developing on a later release of **Angular**
+than `v6.x.x`, then you should probably choose the appropriate version of this library by visiting the *[master] branch*.
 
 ## Packages:
 Name | Description | NPM
@@ -45,7 +45,7 @@ The MIT License (MIT)
 Copyright (c) 2018 [Burak Tasci]
 
 [master]: https://github.com/ngx-auth/core/tree/master
-[5.x.x]: https://github.com/ngx-auth/core/tree/5.x.x
+[6.x.x]: https://github.com/ngx-auth/core/tree/6.x.x
 [ngx-auth]: https://github.com/fulls1z3/ngx-auth
 [ng-seed/universal]: https://github.com/ng-seed/universal
 [fulls1z3/example-app]: https://github.com/fulls1z3/example-app
