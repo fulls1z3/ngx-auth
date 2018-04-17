@@ -1,6 +1,6 @@
 {
   "name": "@ngx-auth/auth0",
-  "version": "5.1.0",
+  "version": "6.0.0-rc.1",
   "description": "Auth0 platform implementation of ngx-auth",
   "repository": {
     "type": "git",
