@@ -41,7 +41,7 @@
     "rxjs": "6.0.0-uncanny-rc.7",
     "zone.js": "~0.8.26",
     "request": "~2.85.0",
-    "auth0-js": "~9.4.2",
+    "auth0-js": "~9.5.0",
     "@types/auth0-js": "~8.11.2",
     "@types/node": "~9.6.5",
     "@types/jest": "~22.2.3",
