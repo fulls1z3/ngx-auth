@@ -4,7 +4,7 @@
   "description": "JWT authentication utility for Angular & Angular Universal",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fulls1z3/ngx-auth.git"
+    "url": "https://github.com/holidaylab/ngx-auth.git"
   },
   "keywords": [
     "security",
@@ -17,13 +17,13 @@
   ],
   "author": {
     "name": "Burak Tasci",
-    "email": "me@fulls1z3.com"
+    "email": "b.tasci@holidaylab.io"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fulls1z3/ngx-auth/issues"
+    "url": "https://github.com/holidaylab/ngx-auth/issues"
   },
-  "homepage": "https://github.com/fulls1z3/ngx-auth/tree/master/packages/@ngx-auth/core#readme",
+  "homepage": "https://github.com/holidaylab/ngx-auth/tree/master/packages/@ngx-auth/core#readme",
   "dependencies": {
     "tslib": "~1.9.0"
   },
