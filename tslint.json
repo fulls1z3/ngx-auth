@@ -4,5 +4,8 @@
   ],
   "extends": [
     "angular-tslint-rules"
-  ]
+  ],
+  "rules": {
+    "comment-format": [true, "check-lowercase", {"ignore-words": ["TODO", "NOTE"]}]
+  }
 }
