@@ -14,7 +14,7 @@
     "rootDir": "./",
     "baseUrl": "",
     "paths": {
-      "@ngx-auth/*": ["../../../dist/@ngx-auth/*"]
+      "@ngx-auth/*": ["../../dist/@ngx-auth/*"]
     },
     "typeRoots": ["../../node_modules/@types"],
     "lib": [
