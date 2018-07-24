@@ -1,8 +1,8 @@
 # @ngx-auth/auth0 [![npm version](https://badge.fury.io/js/%40ngx-auth%2Fauth0.svg)](https://www.npmjs.com/package/@ngx-auth/auth0) [![npm downloads](https://img.shields.io/npm/dm/%40ngx-auth%2Fauth0.svg)](https://www.npmjs.com/package/@ngx-auth/auth0)
 **[Auth0]** platform implementation of **[ngx-auth]**
 
-[![CircleCI](https://circleci.com/gh/holidaylab/ngx-auth.svg?style=shield)](https://circleci.com/gh/holidaylab/ngx-auth)
-[![coverage](https://codecov.io/github/holidaylab/ngx-auth/coverage.svg?branch=master)](https://codecov.io/gh/holidaylab/ngx-auth)
+[![CircleCI](https://circleci.com/gh/fulls1z3/ngx-auth.svg?style=shield)](https://circleci.com/gh/fulls1z3/ngx-auth)
+[![coverage](https://codecov.io/github/fulls1z3/ngx-auth/coverage.svg?branch=master)](https://codecov.io/gh/fulls1z3/ngx-auth)
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/styleguide)
@@ -265,16 +265,16 @@ and redirects to the `login` page.
 ## <a name="license"></a> License
 The MIT License (MIT)
 
-Copyright (c) 2018 [HolidayLAB]
+Copyright (c) 2018 [Burak Tasci]
 
-[master]: https://github.com/holidaylab/ngx-auth/core/tree/master
-[6.x.x]: https://github.com/holidaylab/ngx-auth/core/tree/6.x.x
+[master]: https://github.com/fulls1z3/ngx-auth/core/tree/master
+[6.x.x]: https://github.com/fulls1z3/ngx-auth/core/tree/6.x.x
 [Auth0]: https://auth0.com
-[ngx-auth]: https://github.com/holidaylab/ngx-auth
+[ngx-auth]: https://github.com/fulls1z3/ngx-auth
 [ng-seed/universal]: https://github.com/ng-seed/universal
 [fulls1z3/example-app]: https://github.com/fulls1z3/example-app
-[@ngx-auth/core]: https://github.com/holidaylab/ngx-auth/tree/master/packages/@ngx-auth/core
-[@ngx-config/core]: https://github.com/holidaylab/ngx-config/tree/master/packages/@ngx-config/core
+[@ngx-auth/core]: https://github.com/fulls1z3/ngx-auth/tree/master/packages/@ngx-auth/core
+[@ngx-config/core]: https://github.com/fulls1z3/ngx-config/tree/master/packages/@ngx-config/core
 [forRoot]: https://angular.io/docs/ts/latest/guide/ngmodule.html#!#core-for-root
 [AoT compilation]: https://angular.io/docs/ts/latest/cookbook/aot-compiler.html
-[HolidayLAB]: https://github.com/holidaylab
+[Burak Tasci]: https://github.com/fulls1z3

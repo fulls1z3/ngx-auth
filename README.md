@@ -1,11 +1,11 @@
 # ngx-auth
 **[Auth0]** platform implementation and JWT authentication utility for **Angular** & **Angular Universal**
 
-[![CircleCI](https://circleci.com/gh/holidaylab/ngx-auth.svg?style=shield)](https://circleci.com/gh/holidaylab/ngx-auth)
-[![coverage](https://codecov.io/github/holidaylab/ngx-auth/coverage.svg?branch=master)](https://codecov.io/gh/holidaylab/ngx-auth)
+[![CircleCI](https://circleci.com/gh/fulls1z3/ngx-auth.svg?style=shield)](https://circleci.com/gh/fulls1z3/ngx-auth)
+[![coverage](https://codecov.io/github/fulls1z3/ngx-auth/coverage.svg?branch=master)](https://codecov.io/gh/fulls1z3/ngx-auth)
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
-[![Greenkeeper badge](https://badges.greenkeeper.io/holidaylab/ngx-auth.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/fulls1z3/ngx-auth.svg)](https://greenkeeper.io/)
 [![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/styleguide)
 
 > Please support this project by simply putting a Github star. Share this library with friends on Twitter and everywhere else you can.
@@ -22,8 +22,8 @@ than `v6.x.x`, then you should probably choose the appropriate version of this l
 ## Packages:
 Name | Description | NPM
 --- | --- | ---
-[@ngx-auth/core](https://github.com/holidaylab/ngx-auth/tree/master/packages/@ngx-auth/core) | Authentication utility for **Angular** | [![npm version](https://badge.fury.io/js/%40ngx-auth%2Fcore.svg)](https://www.npmjs.com/package/@ngx-auth/core)
-[@ngx-auth/auth0](https://github.com/holidaylab/ngx-auth/tree/master/packages/@ngx-auth/auth0) | **[Auth0]** platform implementation of **[ngx-auth]** | [![npm version](https://badge.fury.io/js/%40ngx-auth%2Fauth0.svg)](https://www.npmjs.com/package/@ngx-auth/auth0)
+[@ngx-auth/core](https://github.com/fulls1z3/ngx-auth/tree/master/packages/@ngx-auth/core) | Authentication utility for **Angular** | [![npm version](https://badge.fury.io/js/%40ngx-auth%2Fcore.svg)](https://www.npmjs.com/package/@ngx-auth/core)
+[@ngx-auth/auth0](https://github.com/fulls1z3/ngx-auth/tree/master/packages/@ngx-auth/auth0) | **[Auth0]** platform implementation of **[ngx-auth]** | [![npm version](https://badge.fury.io/js/%40ngx-auth%2Fauth0.svg)](https://www.npmjs.com/package/@ngx-auth/auth0)
 
 ## Examples
 - [ng-seed/universal] and [fulls1z3/example-app] are officially maintained projects, showcasing common patterns and best
@@ -42,14 +42,14 @@ If you want to file a bug, contribute some code, or improve documentation, pleas
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2018 [HolidayLAB]
+Copyright (c) 2018 [Burak Tasci]
 
-[master]: https://github.com/holidaylab/ngx-auth/core/tree/master
-[6.x.x]: https://github.com/holidaylab/ngx-auth/core/tree/6.x.x
-[ngx-auth]: https://github.com/holidaylab/ngx-auth
+[master]: https://github.com/fulls1z3/ngx-auth/core/tree/master
+[6.x.x]: https://github.com/fulls1z3/ngx-auth/core/tree/6.x.x
+[ngx-auth]: https://github.com/fulls1z3/ngx-auth
 [ng-seed/universal]: https://github.com/ng-seed/universal
 [fulls1z3/example-app]: https://github.com/fulls1z3/example-app
 [Auth0]: https://auth0.com
 [JetBrains]: https://www.jetbrains.com/community/opensource
 [WebStorm]:   https://www.jetbrains.com/webstorm
-[HolidayLAB]: https://github.com/holidaylab
+[Burak Tasci]: https://github.com/fulls1z3
