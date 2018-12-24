@@ -1,11 +1,14 @@
 {
-  "rulesDirectory": [
-    "node_modules/codelyzer"
-  ],
-  "extends": [
-    "angular-tslint-rules"
-  ],
+  "rulesDirectory": ["node_modules/codelyzer"],
+  "extends": ["angular-tslint-rules", "tslint-config-prettier"],
   "rules": {
-    "comment-format": [true, "check-lowercase", {"ignore-words": ["TODO", "NOTE"]}]
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "case-insensitive",
+        "named-imports-order": "case-insensitive",
+        "grouped-imports": true
+      }
+    ]
   }
 }
