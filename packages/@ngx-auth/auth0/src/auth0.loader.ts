@@ -1,7 +1,5 @@
-// libs
 import { AuthLoader } from '@ngx-auth/core';
 
-// module
 import { Auth0Backend } from './models/auth0-backend';
 import { Auth0Settings } from './models/auth0-settings';
 
@@ -30,17 +28,18 @@ export class Auth0StaticLoader implements AuthLoader {
     return this.providedSettings.defaultUrl;
   }
 
-  constructor(private readonly providedSettings: Auth0Settings = {
-    backend: {
-      domain: '',
-      clientID: '',
-      scope: 'openid',
-      responseType: 'token id_token'
-    },
-    storage: localStorage,
-    storageKey: 'currentUser',
-    publicRoute: ['public'],
-    defaultUrl: ''
-  }) {
-  }
+  constructor(
+    private readonly providedSettings: Auth0Settings = {
+      backend: {
+        domain: '',
+        clientID: '',
+        scope: 'openid',
+        responseType: 'token id_token'
+      },
+      storage: localStorage,
+      storageKey: 'currentUser',
+      publicRoute: ['public'],
+      defaultUrl: ''
+    }
+  ) {}
 }

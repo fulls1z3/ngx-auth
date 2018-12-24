@@ -1,4 +1,3 @@
-// module
 import { Auth0Backend } from './auth0-backend';
 
 export interface Auth0Settings {

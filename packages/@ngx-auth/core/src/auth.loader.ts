@@ -1,4 +1,3 @@
-// module
 import { AuthSettings } from './models/auth-settings';
 import { Backend } from './models/backend';
 
@@ -35,15 +34,16 @@ export class AuthStaticLoader implements AuthLoader {
     return this.providedSettings.defaultUrl;
   }
 
-  constructor(private readonly providedSettings: AuthSettings = {
-    backend: {
-      endpoint: '/api/authenticate',
-      params: []
-    },
-    storage: localStorage,
-    storageKey: 'currentUser',
-    loginRoute: ['login'],
-    defaultUrl: ''
-  }) {
-  }
+  constructor(
+    private readonly providedSettings: AuthSettings = {
+      backend: {
+        endpoint: '/api/authenticate',
+        params: []
+      },
+      storage: localStorage,
+      storageKey: 'currentUser',
+      loginRoute: ['login'],
+      defaultUrl: ''
+    }
+  ) {}
 }

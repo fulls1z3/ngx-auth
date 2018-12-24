@@ -1,13 +1,11 @@
-// angular
 import { Inject, InjectionToken, ModuleWithProviders, NgModule, Optional } from '@angular/core';
 
-// module
-import { AuthSettings } from './src/models/auth-settings';
+import { AuthServerGuard } from './src/auth-server.guard';
+import { AuthServerService } from './src/auth-server.service';
 import { AuthGuard } from './src/auth.guard';
 import { AuthLoader, AuthStaticLoader } from './src/auth.loader';
 import { AuthService } from './src/auth.service';
-import { AuthServerGuard } from './src/auth-server.guard';
-import { AuthServerService } from './src/auth-server.service';
+import { AuthSettings } from './src/models/auth-settings';
 
 export * from './src/models/auth-settings';
 export * from './src/models/backend';
@@ -19,6 +17,7 @@ export * from './src/auth.service';
 export const AUTH_FORROOT_GUARD = new InjectionToken('AUTH_FORROOT_GUARD');
 
 // for AoT compilation
+// tslint:disable-next-line
 export function authFactory(): AuthLoader {
   return new AuthStaticLoader();
 }
@@ -29,20 +28,20 @@ export function authFactory(): AuthLoader {
     AuthService,
     {
       provide: AuthLoader,
-      useFactory: (authFactory)
+      useFactory: authFactory
     }
   ]
 })
 export class AuthModule {
-  static forRoot(configuredProvider: any = {
-    provide: AuthLoader,
-    useFactory: (authFactory)
-  }): ModuleWithProviders {
+  static forRoot(
+    configuredProvider: any = {
+      provide: AuthLoader,
+      useFactory: authFactory
+    }
+  ): ModuleWithProviders {
     return {
       ngModule: AuthModule,
-      providers: [
-        configuredProvider
-      ]
+      providers: [configuredProvider]
     };
   }
 
@@ -68,15 +67,17 @@ export class AuthModule {
     };
   }
 
+  // tslint:disable-next-line
   constructor(@Optional() @Inject(AUTH_FORROOT_GUARD) guard: any) {
     // NOTE: inject token
   }
 }
 
-export function provideForRootGuard(settings: AuthSettings): any {
-  if (settings)
-    throw new Error(
-      'AuthModule.forRoot() already called. Child modules should use AuthModule.forChild() instead.');
+// tslint:disable-next-line
+export function provideForRootGuard(settings?: AuthSettings): any {
+  if (settings) {
+    throw new Error('AuthModule.forRoot() already called. Child modules should use AuthModule.forChild() instead.');
+  }
 
   return 'guarded';
 }

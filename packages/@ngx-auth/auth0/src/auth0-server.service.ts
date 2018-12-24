@@ -1,7 +1,4 @@
-// angular
 import { Injectable } from '@angular/core';
-
-// libs
 import { BehaviorSubject, Observable, of as observableOf } from 'rxjs';
 
 @Injectable()

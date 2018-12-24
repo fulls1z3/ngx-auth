@@ -1,28 +1,23 @@
-// angular
-import { Injectable } from '@angular/core';
 import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
-
-// libs
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-// module
 import { AuthLoader } from '../../src/auth.loader';
 
 @Injectable()
 export class MockJwtInterceptor implements HttpInterceptor {
-  constructor(private readonly loader: AuthLoader) {
-  }
+  constructor(private readonly loader: AuthLoader) {}
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const token = JSON.parse(this.loader.storage.getItem(this.loader.storageKey)).token;
+    const intercepted = token
+      ? request.clone({
+          setHeaders: {
+            Authorization: `Bearer ${token}`
+          }
+        })
+      : request;
 
-    if (token)
-      request = request.clone({
-        setHeaders: {
-          Authorization: `Bearer ${token}`
-        }
-      });
-
-    return next.handle(request);
+    return next.handle(intercepted);
   }
 }
