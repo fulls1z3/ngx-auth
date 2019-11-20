@@ -1,7 +1,7 @@
 import { inject, TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 
-import { AuthLoader, AuthService, AuthStaticLoader } from '../index';
+import { AuthLoader, AuthService, AuthStaticLoader } from '../src';
 
 import { mockAuthData, TestBootstrapComponent, testModuleConfig } from './common';
 

@@ -1,6 +1,6 @@
 {
   "name": "@ngx-auth/auth0",
-  "version": "7.0.0",
+  "version": "0.0.0",
   "description": "Auth0 platform implementation of ngx-auth",
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   ],
   "author": {
     "name": "Burak Tasci",
-    "email": "me@fulls1z3.com"
+    "email": "mail@buraktasci.com"
   },
   "license": "MIT",
   "bugs": {
@@ -36,5 +36,8 @@
     "rxjs": ">=6.0.0",
     "auth0-js": ">=9.0.0",
     "@ngx-auth/core": ">=7.0.0 <8.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

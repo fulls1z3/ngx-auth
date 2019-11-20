@@ -1,6 +1,6 @@
 import { inject } from '@angular/core/testing';
 
-import { AuthService } from '../index';
+import { AuthService } from '../src';
 import { AuthServerService } from '../src/auth-server.service';
 
 import { testServerModuleConfig } from './common';

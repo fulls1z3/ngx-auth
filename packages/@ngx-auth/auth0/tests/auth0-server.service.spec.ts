@@ -1,6 +1,6 @@
 import { async, inject } from '@angular/core/testing';
 
-import { Auth0Service } from '../index';
+import { Auth0Service } from '../src';
 import { Auth0ServerService } from '../src/auth0-server.service';
 
 import { testServerModuleConfig } from './common';

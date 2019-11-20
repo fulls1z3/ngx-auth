@@ -1,20 +1,11 @@
 import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 import { AuthGuard, AuthLoader, AuthServerGuard, AuthService } from '@ngx-auth/core';
 
-import { Auth0ServerService } from './src/auth0-server.service';
-import { Auth0StaticLoader } from './src/auth0.loader';
-import { Auth0Service } from './src/auth0.service';
+import { Auth0ServerService } from './auth0-server.service';
+import { Auth0StaticLoader } from './auth0.loader';
+import { Auth0Service } from './auth0.service';
 
-export * from './src/models/auth0-backend';
-export * from './src/models/auth0-settings';
-export * from './src/auth0.loader';
-export * from './src/auth0.service';
-
-// for AoT compilation
-// tslint:disable-next-line
-export function auth0Factory(): AuthLoader {
-  return new Auth0StaticLoader();
-}
+export const auth0Factory = () => new Auth0StaticLoader();
 
 @NgModule({
   providers: [

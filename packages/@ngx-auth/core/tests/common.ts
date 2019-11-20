@@ -4,7 +4,7 @@ import { BrowserDynamicTestingModule, platformBrowserDynamicTesting } from '@ang
 import { Routes } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 
-import { AuthGuard, AuthModule, AuthSettings } from '../index';
+import { AuthGuard, AuthModule, AuthSettings } from '../src';
 import { AuthTestingModule } from '../testing/auth.testing.module';
 
 @Component({ template: '<router-outlet></router-outlet>' })

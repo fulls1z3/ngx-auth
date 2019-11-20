@@ -1,26 +1,15 @@
 import { Inject, InjectionToken, ModuleWithProviders, NgModule, Optional } from '@angular/core';
 
-import { AuthServerGuard } from './src/auth-server.guard';
-import { AuthServerService } from './src/auth-server.service';
-import { AuthGuard } from './src/auth.guard';
-import { AuthLoader, AuthStaticLoader } from './src/auth.loader';
-import { AuthService } from './src/auth.service';
-import { AuthSettings } from './src/models/auth-settings';
-
-export * from './src/models/auth-settings';
-export * from './src/models/backend';
-export * from './src/auth-server.guard';
-export * from './src/auth.guard';
-export * from './src/auth.loader';
-export * from './src/auth.service';
+import { AuthServerGuard } from './auth-server.guard';
+import { AuthServerService } from './auth-server.service';
+import { AuthGuard } from './auth.guard';
+import { AuthLoader, AuthStaticLoader } from './auth.loader';
+import { AuthService } from './auth.service';
+import { AuthSettings } from './models/auth-settings';
 
 export const AUTH_FORROOT_GUARD = new InjectionToken('AUTH_FORROOT_GUARD');
 
-// for AoT compilation
-// tslint:disable-next-line
-export function authFactory(): AuthLoader {
-  return new AuthStaticLoader();
-}
+export const authFactory = () => new AuthStaticLoader();
 
 @NgModule({
   providers: [
@@ -73,11 +62,10 @@ export class AuthModule {
   }
 }
 
-// tslint:disable-next-line
-export function provideForRootGuard(settings?: AuthSettings): any {
+export const provideForRootGuard = (settings?: AuthSettings) => {
   if (settings) {
     throw new Error('AuthModule.forRoot() already called. Child modules should use AuthModule.forChild() instead.');
   }
 
   return 'guarded';
-}
+};

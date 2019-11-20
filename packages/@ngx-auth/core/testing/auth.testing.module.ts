@@ -2,7 +2,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { InjectionToken, ModuleWithProviders, NgModule } from '@angular/core';
 
-import { authFactory, AuthModule } from '../index';
+import { authFactory, AuthModule } from '../src';
 import { AuthLoader } from '../src/auth.loader';
 
 import { MockBackendInterceptor } from './mocks/backend-interceptor.mock';

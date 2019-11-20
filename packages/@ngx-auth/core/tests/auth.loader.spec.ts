@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AuthLoader, AuthService, AuthStaticLoader, Backend } from '../index';
+import { AuthLoader, AuthService, AuthStaticLoader, Backend } from '../src';
 
 import { testModuleConfig, testSettings } from './common';
 

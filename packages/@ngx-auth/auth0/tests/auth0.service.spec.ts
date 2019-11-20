@@ -1,7 +1,7 @@
 import { async, inject, TestBed } from '@angular/core/testing';
 import { AuthLoader } from '@ngx-auth/core';
 
-import { Auth0Service, Auth0StaticLoader } from '../index';
+import { Auth0Service, Auth0StaticLoader } from '../src';
 
 import { TestBootstrapComponent, testModuleConfig, testSettings } from './common';
 

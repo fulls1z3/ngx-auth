@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../../dist/@ngx-auth/auth0",
   "lib": {
-    "entryFile": "index.ts",
+    "entryFile": "src/index.ts",
     "umdModuleIds": {
       "rxjs": "rxjs",
       "auth0-js": "auth0js",
       "@ngx-auth/core": "ngxAuth_core"
     }
-  },
-  "dest": "../../../dist/@ngx-auth/auth0"
+  }
 }

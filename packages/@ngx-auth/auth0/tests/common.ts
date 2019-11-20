@@ -5,7 +5,7 @@ import { Routes } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AuthGuard } from '@ngx-auth/core';
 
-import { Auth0Module, Auth0Settings } from '../index';
+import { Auth0Module, Auth0Settings } from '../src';
 
 @Component({ template: '<router-outlet></router-outlet>' })
 export class TestBootstrapComponent {}
