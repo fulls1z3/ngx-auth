@@ -86,7 +86,7 @@ export class Auth0Service {
       });
     });
 
-    return observableFrom<boolean>(res$);
+    return observableFrom(res$);
   }
 
   async invalidate(): Promise<boolean> {
