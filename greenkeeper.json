@@ -1,0 +1,11 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "packages/@ngx-auth/auth0/package.json",
+        "packages/@ngx-auth/core/package.json"
+      ]
+    }
+  }
+}
