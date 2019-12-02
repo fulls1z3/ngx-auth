@@ -4,7 +4,7 @@
   "description": "Auth0 platform implementation of ngx-auth",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fulls1z3/ngx-auth"
+    "url": "https://github.com/fulls1z3/ngx-auth.git"
   },
   "keywords": [
     "security",
