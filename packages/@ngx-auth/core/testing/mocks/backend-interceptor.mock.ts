@@ -22,9 +22,9 @@ export class MockBackendInterceptor implements HttpInterceptor {
             body: { token: 'fake-jwt-token' }
           })
         );
-      } else {
-        return observableOf(new HttpResponse({ status: 401 }));
       }
+
+      return observableOf(new HttpResponse({ status: 401 }));
     }
 
     return next.handle(request);

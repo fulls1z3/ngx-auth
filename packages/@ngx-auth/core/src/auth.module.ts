@@ -27,20 +27,20 @@ export class AuthModule {
       provide: AuthLoader,
       useFactory: authFactory
     }
-  ): ModuleWithProviders {
+  ): ModuleWithProviders<AuthModule> {
     return {
       ngModule: AuthModule,
       providers: [configuredProvider]
     };
   }
 
-  static forChild(): ModuleWithProviders {
+  static forChild(): ModuleWithProviders<AuthModule> {
     return {
       ngModule: AuthModule
     };
   }
 
-  static forServer(): ModuleWithProviders {
+  static forServer(): ModuleWithProviders<AuthModule> {
     return {
       ngModule: AuthModule,
       providers: [
