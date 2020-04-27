@@ -26,14 +26,14 @@ export class Auth0Module {
       provide: AuthLoader,
       useFactory: auth0Factory
     }
-  ): ModuleWithProviders {
+  ): ModuleWithProviders<Auth0Module> {
     return {
       ngModule: Auth0Module,
       providers: [configuredProvider]
     };
   }
 
-  static forServer(): ModuleWithProviders {
+  static forServer(): ModuleWithProviders<Auth0Module> {
     return {
       ngModule: Auth0Module,
       providers: [
