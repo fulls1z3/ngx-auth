@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/fulls1z3/ngx-auth/compare/v8.1.0...v9.0.0) (2020-04-27)
+
+
+### Features
+
+* **package:** migrate to ng9 ([0a1c4c1](https://github.com/fulls1z3/ngx-auth/commit/0a1c4c11d8cfa3e9649d713da0797b5cdd815d35))
+
+
+### BREAKING CHANGES
+
+* **package:** ng9
+
+
+
+
+
 # [8.1.0](https://github.com/fulls1z3/ngx-auth/compare/v8.0.1...v8.1.0) (2020-04-27)
 
 
