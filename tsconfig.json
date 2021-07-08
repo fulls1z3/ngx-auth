@@ -8,7 +8,7 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es2015",
-    "module": "commonjs",
+    "module": "esnext",
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2017", "dom"],
     "skipLibCheck": true,
@@ -17,9 +17,7 @@
     "paths": {
       "@ngx-auth/core": ["packages/@ngx-auth/core/src/index.ts"],
       "@ngx-auth/auth0": ["packages/@ngx-auth/auth0/src/index.ts"]
-    },
-    "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true
+    }
   },
-  "include": ["tools/**/*.ts", "packages/**/*.ts"]
+  "include": ["packages/**/*.ts"]
 }

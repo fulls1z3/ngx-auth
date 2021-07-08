@@ -36,7 +36,7 @@ npm install @ngx-auth/core --save
 
 ### <a name="examples"></a> Examples
 
-- [ng-seed/universal] and [fulls1z3/example-app] are officially maintained projects, showcasing common patterns and best
+- [universal/universal] and [fulls1z3/example-app] are officially maintained projects, showcasing common patterns and best
   practices for **`@ngx-auth/core`**.
 
 ### <a name="recommended-packages"></a> Recommended packages
@@ -290,9 +290,9 @@ export class LoginComponent {
 
 The MIT License (MIT)
 
-Copyright (c) 2019 [Burak Tasci]
+Copyright (c) 2021 [Burak Tasci]
 
-[ng-seed/universal]: https://github.com/ng-seed/universal
+[universal/universal]: https://github.com/universal/universal
 [fulls1z3/example-app]: https://github.com/fulls1z3/example-app
 [@ngx-config/core]: https://github.com/fulls1z3/ngx-config/tree/master/packages/@ngx-config/core
 [forroot]: https://angular.io/docs/ts/latest/guide/ngmodule.html#!#core-for-root
