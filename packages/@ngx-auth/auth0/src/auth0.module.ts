@@ -7,6 +7,7 @@ import { Auth0Service } from './auth0.service';
 
 export const auth0Factory = () => new Auth0StaticLoader();
 
+// @dynamic
 @NgModule({
   providers: [
     Auth0Service,

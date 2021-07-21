@@ -33,7 +33,7 @@ npm install @ngx-auth/auth0 --save
 
 ### <a name="examples"></a> Examples
 
-- [ng-seed/universal] and [fulls1z3/example-app] are officially maintained projects, showcasing common patterns and best
+- [universal/universal] and [fulls1z3/example-app] are officially maintained projects, showcasing common patterns and best
   practices for **`@ngx-auth/auth0`**.
 
 ### <a name="related-packages"></a> Related packages
@@ -273,11 +273,11 @@ and redirects to the `login` page.
 
 The MIT License (MIT)
 
-Copyright (c) 2019 [Burak Tasci]
+Copyright (c) 2021 [Burak Tasci]
 
 [auth0]: https://auth0.com
 [ngx-auth]: https://github.com/fulls1z3/ngx-auth
-[ng-seed/universal]: https://github.com/ng-seed/universal
+[universal/universal]: https://github.com/universal/universal
 [fulls1z3/example-app]: https://github.com/fulls1z3/example-app
 [@ngx-auth/core]: https://github.com/fulls1z3/ngx-auth/tree/master/packages/@ngx-auth/core
 [@ngx-config/core]: https://github.com/fulls1z3/ngx-config/tree/master/packages/@ngx-config/core

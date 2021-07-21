@@ -11,6 +11,7 @@ export const AUTH_FORROOT_GUARD = new InjectionToken('AUTH_FORROOT_GUARD');
 
 export const authFactory = () => new AuthStaticLoader();
 
+// @dynamic
 @NgModule({
   providers: [
     AuthGuard,

@@ -18,24 +18,27 @@ describe('@ngx-auth/core:', () => {
   describe('AuthGuard', () => {
     beforeEach(inject([AuthService], async (auth: AuthService) => auth.invalidate()));
 
-    it('should be able to `Activate` w/authentication', inject([Router, AuthLoader], async (router: Router, loader: AuthLoader) => {
-      const fixture = TestBed.createComponent(TestBootstrapComponent);
-      fixture.detectChanges();
+    it('should be able to `Activate` w/authentication', inject(
+      [Router, AuthLoader],
+      async (router: Router, loader: AuthLoader) => {
+        const fixture = TestBed.createComponent(TestBootstrapComponent);
+        fixture.detectChanges();
 
-      loader.storage.setItem(loader.storageKey, mockAuthData);
+        loader.storage.setItem(loader.storageKey, mockAuthData);
 
-      return router.navigate(['/']).then(async () => {
-        expect(router.url).toEqual('/');
+        return router.navigate(['/']).then(async () => {
+          expect(router.url).toEqual('/');
 
-        return router.navigate(['/activate-page']).then(async () => {
-          expect(router.url).toEqual('/activate-page');
+          return router.navigate(['/activate-page']).then(async () => {
+            expect(router.url).toEqual('/activate-page');
 
-          return router.navigate(['/activate-feature']).then(() => {
-            expect(router.url).toEqual('/activate-feature');
+            return router.navigate(['/activate-feature']).then(() => {
+              expect(router.url).toEqual('/activate-feature');
+            });
           });
         });
-      });
-    }));
+      }
+    ));
 
     it('should not `Activate` w/o authentication', inject([Router], async (router: Router) => {
       const fixture = TestBed.createComponent(TestBootstrapComponent);
@@ -54,20 +57,23 @@ describe('@ngx-auth/core:', () => {
       });
     }));
 
-    it('should be able to `Load` w/authentication', inject([Router, AuthLoader], async (router: Router, loader: AuthLoader) => {
-      const fixture = TestBed.createComponent(TestBootstrapComponent);
-      fixture.detectChanges();
+    it('should be able to `Load` w/authentication', inject(
+      [Router, AuthLoader],
+      async (router: Router, loader: AuthLoader) => {
+        const fixture = TestBed.createComponent(TestBootstrapComponent);
+        fixture.detectChanges();
 
-      loader.storage.setItem(loader.storageKey, mockAuthData);
+        loader.storage.setItem(loader.storageKey, mockAuthData);
 
-      return router.navigate(['/']).then(async () => {
-        expect(router.url).toEqual('/');
+        return router.navigate(['/']).then(async () => {
+          expect(router.url).toEqual('/');
 
-        return router.navigate(['/load-page']).then(() => {
-          expect(router.url).toEqual('/load-page');
+          return router.navigate(['/load-page']).then(() => {
+            expect(router.url).toEqual('/load-page');
+          });
         });
-      });
-    }));
+      }
+    ));
 
     it('should not `Load` w/o authentication', inject([Router], async (router: Router) => {
       const fixture = TestBed.createComponent(TestBootstrapComponent);

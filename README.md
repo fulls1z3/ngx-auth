@@ -25,7 +25,7 @@ As of version **`5.1.0`**, the library contains **[Auth0]** implementation.
 
 ## Examples
 
-- [ng-seed/universal] and [fulls1z3/example-app] are officially maintained projects, showcasing common patterns and best
+- [universal/universal] and [fulls1z3/example-app] are officially maintained projects, showcasing common patterns and best
   practices for **`ngx-auth`**.
 
 ## Contributing
@@ -45,10 +45,10 @@ If you want to file a bug, contribute some code, or improve documentation, pleas
 
 The MIT License (MIT)
 
-Copyright (c) 2019 [Burak Tasci]
+Copyright (c) 2021 [Burak Tasci]
 
 [ngx-auth]: https://github.com/fulls1z3/ngx-auth
-[ng-seed/universal]: https://github.com/ng-seed/universal
+[universal/universal]: https://github.com/universal/universal
 [fulls1z3/example-app]: https://github.com/fulls1z3/example-app
 [auth0]: https://auth0.com
 [jetbrains]: https://www.jetbrains.com/community/opensource
